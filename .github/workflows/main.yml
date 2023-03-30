@@ -14,8 +14,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ssh.strato.de
-        port: 22
+        server: ftp.strato.de
         username: sftp_jonas@jonas-hauptmann.de 
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: projects/unit-converter/
