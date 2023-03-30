@@ -10,13 +10,11 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-    
-    - name: Teste Passwort
-      run: |
-        echo ${{ secrets.FTP_PASSWORD }} | sed 's/./& /g' 
+      
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
+        log-level: verbose
         server: ftp.strato.de
         username: sftp_jonas@jonas-hauptmann.de 
         password: ${{ secrets.FTP_PASSWORD }}
