@@ -48,6 +48,11 @@ createResultDivs();
 
 
 convertBtn.addEventListener("click", function() {
+
+    let dialogDiv = document.getElementById("add-conversion")
+    
+    dialogDiv.style.display = "block";
+
     let baseValue = inputEl.value;
     
     // destructoring
