@@ -15,7 +15,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ssh.strato.de
-        protocol: ftps
         port: 22
         username: sftp_jonas@jonas-hauptmann.de 
         password: ${{ secrets.FTP_PASSWORD }}
